@@ -13,6 +13,9 @@ body {
 body {
     padding-top: 60px; /* Ensure the body content starts below the navigation bar */
 }
+nav {
+    border-radius: 10px;
+}
 .nav-link.active {
     color: rgb(245, 159, 0);
     background-color: rgb(228, 200, 200);
