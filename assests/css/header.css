@@ -1,0 +1,56 @@
+/* Header Styling */
+header {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.5);
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Page Title */
+.page-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffa500; /* Saffron */
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Navigation Links */
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Highlighting Active Page */
+.nav-link.active, 
+.nav-link:hover {
+    color: #ffa500; /* Saffron highlight */
+    text-shadow: 0px 0px 8px rgba(255, 165, 0, 0.8);
+    border-bottom: 2px solid #ffa500; /* Underline effect */
+    padding-bottom: 5px;
+}

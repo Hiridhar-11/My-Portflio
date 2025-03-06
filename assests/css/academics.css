@@ -1,0 +1,167 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 20px;
+}
+body {
+    padding-top: 60px; /* Ensure the body content starts below the navigation bar */
+}
+.nav-link.active {
+    color: rgb(245, 159, 0);
+    background-color: rgb(228, 200, 200);
+}
+nav {
+    background-color: #222;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000; /* Ensure the nav bar stays on top */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li a {
+    color: rgb(219, 205, 205);
+    text-decoration: blue;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+nav ul li a:hover, .nav-link.active {
+    color: rgb(228, 200, 200);
+    background-color: rgb(245, 159, 0);
+}
+
+
+section {
+    padding: 50px 20px;
+}
+
+.round-btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: black;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+.round-btn:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    font-size: 24px;
+    color: rgb(231, 192, 118);
+}
+p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+}
+h3 {
+    font-size: 22px;
+    color: rgb(231, 192, 118);
+    margin-top: 20px;
+}
+
+.activity, .leadership {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.activity i, .leadership i {
+    font-size: 30px;
+    color: orange;
+}
+
+.college-btn img {
+    width: 100px;
+    background-color: rgb(255, 166, 0);
+    display: flex;
+    height: 100px;
+    border-radius: 50%;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+body {
+    background: black;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 20px;
+    background-image: url("../images/school1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: changeBackground 15s infinite;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0.1, 0.1, 0.5); /* Adjust the opacity to make the background image intensity medium */
+    z-index: -1;
+}
+
+@keyframes changeBackground {
+    0% { background-image: url("../images/graduation.jpg"); }
+    33% { background-image: url("../images/leader1.jpg"); }
+    66% { background-image: url("../images/sports1.jpg"); }
+    100% { background-image: url("../images/gradu.jpg"); }
+}
+
+/* Individual slides */
+.mySlides {
+    display: none;
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 } 
+    to { opacity: 1 }
+}

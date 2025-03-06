@@ -1,0 +1,109 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 22px;
+}
+
+nav {
+    background-color: #222;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li a {
+    color: rgb(219, 205, 205);
+    text-decoration: blue;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+nav ul li a:hover, .nav-link.active {
+    color: rgb(228, 200, 200);
+    background-color: rgb(245, 159, 0);
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 50px;
+    width: 100%;
+    height: 80vh;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 170%;
+    height: 100%;
+    background-image: url("../images/new.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    opacity: 0.4;
+    z-index: -1;
+   
+}
+
+.highlight {
+    color: rgb(231, 164, 38);
+    
+}
+
+.typing-effect {
+    font-size: 29px;
+    font-weight: bold;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+.social-icons a {
+    color: orange;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: rgb(228, 204, 204);
+}
+button {
+    background-color: saffron;
+    color: rgb(245, 144, 11);
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 1s;
+}
+
+button:hover {
+    background-color: rgb(248, 136, 0);
+}
