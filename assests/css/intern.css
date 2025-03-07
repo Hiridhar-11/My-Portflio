@@ -1,0 +1,126 @@
+body {
+    background: linear-gradient(to bottom, #f18920, #d3d3d3);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.nav-link.active {
+    color: rgb(245, 159, 0);
+    background-color: rgb(228, 200, 200);
+}
+nav {
+    background-color: #222;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000; /* Ensure the nav bar stays on top */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li a {
+    color: rgb(219, 205, 205);
+    text-decoration: blue;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+nav ul li a:hover, .nav-link.active {
+    color: rgb(228, 200, 200);
+    background-color: rgb(245, 159, 0);
+}
+
+.container {
+    margin-top: 60px; /* Adjust based on the height of your nav bar */
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* Full height minus the height of the nav bar */
+}
+
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto; /* Center the slideshow */
+    overflow: hidden;
+    border-radius: 15px; /* Curved edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+}
+
+.slides {
+    width: 100%;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 15px; /* Curved edges */
+}
+
+.container {
+    padding: 20px;
+    font-size: medium;
+    ;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 150px;
+    margin: 20px auto;
+    display: block;
+}
+
+.about {
+    font-size: 18px;
+    color: #2c2727;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    width: 100%;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.activity-button-container {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    top: 100px; /* Adjust this value as needed to move the button up */
+}
+.activity-button {
+    background-color: #e9c074; /* Saffron color */
+    color: #b12222; /* White color */
+    font-size: 20px; /* Larger font size */
+    padding: 20px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.activity-button:hover {
+    background-color: #d8cba6; 
+}
