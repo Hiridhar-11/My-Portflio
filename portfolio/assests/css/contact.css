@@ -1,0 +1,190 @@
+/* Contact Section */
+.contact-container {
+  display: grid;
+  gap: 2.5rem;
+}
+body {
+  margin-top: 80px; /* Adjust this value based on the height of your nav bar */
+}
+/* Fade-in effect for the page */
+body {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Adjust the position of the contact section */
+.contact-container {
+  margin-top: 180px; /* Adjust this value as needed */
+}
+nav {
+  background-color: #222;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  margin: 0 20px;
+}
+nav ul li a {
+  color: rgb(219, 205, 205);
+  text-decoration: blue;
+  font-size: 18px;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+nav ul li a:hover, .nav-link.active {
+  color: rgb(228, 200, 200);
+  background-color: rgb(245, 159, 0);
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.contact-methods {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+}
+.contact-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+:root {
+  --text-muted: #a0a0a0;
+  --card-bg: #ffffff;
+  --border: #333;
+  --radius: 8px;
+  --primary: #ff9933;
+  --transition: all 0.3s ease-in-out;
+  --background-saffron: #ff9933;
+  --background-white: #ffffff;
+}
+
+body {
+  background: linear-gradient(var(--background-saffron), var(--background-white));
+}
+
+.method-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  color: var(--primary);
+  margin-right: 1rem;
+}
+
+.method-details h4 {
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.method-details p {
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.contact-form-container {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: rgb(204, 47, 47);
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(10, 165, 233, 0.25);
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.btn-submit {
+  width: 100%;
+}
+
+.form-success {
+  display: none;
+  padding: 0.75rem;
+  background: rgba(74, 134, 96, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.5);
+  border-radius: var(--radius);
+  color: #22c55e;
+  margin-top: 1rem;
+}
+
+/* Define missing CSS variables */
+:root {
+  --text-muted: #ffffff;
+  --card-bg: #1a1a1a;
+  --border: #333;
+  --radius: 8px;
+  --primary: #0aa5e9;
+  --transition: all 0.3s ease-in-out;
+}
