@@ -1,29 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.querySelectorAll(".open-btn");
-    document.addEventListener("DOMContentLoaded", function () {
-        const fadeInElements = document.querySelectorAll(".fade-in");
-    
-        function handleScroll() {
-            fadeInElements.forEach((element) => {
-                const position = element.getBoundingClientRect().top;
-                if (position < window.innerHeight - 100) {
-                    element.classList.add("show");
-                }
-            });
-        }
-        
-        window.addEventListener("scroll", handleScroll);
-        handleScroll(); // Run initially in case elements are already in view
-    });
-    buttons.forEach((button) => {
-        button.addEventListener("click", function () {
-            const target = document.querySelector(button.getAttribute("data-target"));
-            if (target) {
-                target.classList.add("fade-in");
+
+    const fadeInElements = document.querySelectorAll(".fade-in");
+    function handleScroll() {
+        fadeInElements.forEach((element) => {
+            const position = element.getBoundingClientRect().top;
+            if (position < window.innerHeight - 100) {
+                element.classList.add("show");
             }
         });
-    });
-    
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
     let driveLinks = [
         "https://drive.google.com/drive/folders/1LkhBPZyRbLAGL7dOaNfcNRW9Q89psR_z?usp=drive_link",
         "https://drive.google.com/drive/folders/1KodoiyTI6friti6c5wXzmt4cLQAW4IhD?usp=drive_link",
@@ -32,10 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
         "https://drive.google.com/drive/folders/19czGsFR_1m0wHVzRnZIYk1tWTsU4PYIv?usp=drive_link",
         "https://drive.google.com/drive/folders/1kWkZtdMRj5iuXvOHCcBP292eDWak0oiA?usp=drive_link"
     ];
-    
+
     buttons.forEach((button, index) => {
         button.addEventListener("click", function () {
             window.open(driveLinks[index], "_blank");
         });
     });
 });
+
