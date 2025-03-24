@@ -152,15 +152,8 @@ p {
     transform: translateY(0);
 }
 
-/* Background Animation */
-@keyframes changeBackground {
-    0% { background-image: url("../images/graduation.jpg"); }
-    33% { background-image: url("../images/leader1.jpg"); }
-    66% { background-image: url("../images/sports1.jpg"); }
-    100% { background-image: url("../images/gradu.jpg"); }
-}
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
