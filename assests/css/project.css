@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     
-    background: url('../images/images.jpg') no-repeat center center fixed;
+    background: url('../images/project.jpg') ;
 background-color: rgba(0, 0, 0, 0.5);
     background-size: cover;
     color: rgb(179, 184, 159);
@@ -25,7 +25,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 1000; /* Ensure the nav bar stays on top */
+    z-index: 1000; 
 }
 nav ul {
     list-style: none;
