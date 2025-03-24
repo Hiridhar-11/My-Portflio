@@ -1,48 +1,56 @@
-/* Base Styles */
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
     background: black;
     color: white;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding-top: 60px;
+    padding-top: 80px;
+    text-align: center;
     background-image: url("../images/school1.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
     animation: changeBackground 15s infinite;
-    position: relative;
 }
 
+/* Overlay to dim background */
 body::before {
     content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0.1, 0.1, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     z-index: -1;
 }
 
-/* Navigation */
+/* Navigation Bar */
 nav {
-    background-color: #222;
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: #222;
+    padding: 10px;
     z-index: 1000;
-    padding: 10px 0;
+    font-size: 18px;
 }
 
 nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 5px 15px;
+    margin: 10px;
 }
 
 nav ul li a {
@@ -56,59 +64,32 @@ nav ul li a {
 nav ul li a:hover,
 .nav-link.active {
     background-color: rgb(245, 159, 0);
-    color: black;
+    color: rgb(28, 28, 28);
 }
 
-/* Section Styling */
+/* Sections */
 section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
+    padding: 40px 20px;
 }
 
-.round-btn {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background-color: orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 36px;
-    color: black;
+/* School and College Sections */
+.school-section, .college-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
     margin: 20px auto;
-    box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8);
-    transition: transform 0.3s ease;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-.round-btn:hover {
-    transform: scale(1.1);
-}
-
-.college-btn img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    background-color: orange;
-}
-
-h2 {
-    font-size: 24px;
+h2, h3 {
     color: rgb(231, 192, 118);
-    margin: 10px 0;
-}
-
-h3 {
-    font-size: 20px;
-    color: rgb(231, 192, 118);
-    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 p {
-    font-size: 16px;
     color: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
     margin: 8px 0;
 }
 
@@ -117,21 +98,49 @@ p {
     color: orange;
 }
 
-.activity, .leadership {
+.round-btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: orange;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    margin: 20px auto;
+    font-size: 40px;
+    color: black;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.round-btn:hover {
+    transform: scale(1.1);
+}
+
+.college-btn img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: orange;
+}
+
+/* Activity and Leadership Icons */
+.activity, .leadership {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .activity i, .leadership i {
-    font-size: 24px;
+    font-size: 30px;
     color: orange;
 }
 
-/* Animation */
+/* Fade-in animation */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -143,6 +152,7 @@ p {
     transform: translateY(0);
 }
 
+/* Background Animation */
 @keyframes changeBackground {
     0% { background-image: url("../images/graduation.jpg"); }
     33% { background-image: url("../images/leader1.jpg"); }
@@ -150,7 +160,7 @@ p {
     100% { background-image: url("../images/gradu.jpg"); }
 }
 
-
+/* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -158,29 +168,35 @@ p {
     }
 
     nav ul li {
-        margin: 8px 0;
+        margin: 5px 0;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .school-section, .college-section {
+        margin: 15px 10px;
+        padding: 15px;
     }
 
     .round-btn, .college-btn img {
-        width: 70px;
-        height: 70px;
-        font-size: 28px;
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
     }
 
-    h2 {
+    h2, h3 {
         font-size: 20px;
     }
 
-    h3 {
-        font-size: 18px;
-    }
-
     p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .activity, .leadership {
         flex-direction: column;
-        gap: 5px;
+        text-align: center;
     }
 }
+
