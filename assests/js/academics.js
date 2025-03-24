@@ -1,4 +1,4 @@
-// academics.js
+
 document.addEventListener("DOMContentLoaded", function () {
     const fadeInElements = document.querySelectorAll(".fade-in");
 
@@ -12,5 +12,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial trigger
+    handleScroll();
 });
