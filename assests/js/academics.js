@@ -1,3 +1,4 @@
+// academics.js
 document.addEventListener("DOMContentLoaded", function () {
     const fadeInElements = document.querySelectorAll(".fade-in");
 
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    
+
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Run initially in case elements are already in view
+    handleScroll(); // Initial trigger
 });
