@@ -9,6 +9,8 @@ body {
     justify-content: center;
     height: 100vh;
     font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -20,6 +22,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 1000;
 }
 nav ul {
     list-style: none;
@@ -31,7 +34,7 @@ nav ul li {
 }
 nav ul li a {
     color: rgb(219, 205, 205);
-    text-decoration: blue;
+    text-decoration: none;
     font-size: 18px;
     transition: color 0.3s, background-color 0.3s;
     padding: 5px 10px;
@@ -65,12 +68,10 @@ nav ul li a:hover, .nav-link.active {
     filter: grayscale(100%);
     opacity: 0.4;
     z-index: -1;
-   
 }
 
 .highlight {
     color: rgb(231, 164, 38);
-    
 }
 
 .typing-effect {
@@ -86,22 +87,23 @@ nav ul li a:hover, .nav-link.active {
 .social-icons a {
     color: orange;
     font-size: 24px;
-    margin: 0 10px;
+    margin: 0 12px;
     transition: color 0.3s;
 }
 .social-icons a:hover {
     color: rgb(228, 204, 204);
 }
+
 button {
-    background-color: saffron;
-    color: rgb(245, 144, 11);
+    background-color: rgb(255, 153, 0);
+    color: white;
     font-size: 18px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 30px;
-    transition: background-color 1s;
+    transition: background-color 0.3s;
 }
 
 button:hover {
