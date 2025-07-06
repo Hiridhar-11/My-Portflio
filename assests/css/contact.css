@@ -1,15 +1,26 @@
-/* Contact Section */
-.contact-container {
-  display: grid;
-  gap: 2.5rem;
+/* =============================
+   GLOBAL STYLES
+============================= */
+
+:root {
+  --primary: #ff9933;            /* Saffron */
+  --background: #121212;         /* Deep black */
+  --card-bg: #1e1e1e;
+  --text-light: #f5f5f5;
+  --text-muted: #bbbbbb;
+  --border: #333;
+  --radius: 8px;
+  --transition: all 0.3s ease-in-out;
 }
+
 body {
-  margin-top: 80px; /* Adjust this value based on the height of your nav bar */
-}
-/* Fade-in effect for the page */
-body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(var(--primary), var(--background));
+  color: var(--text-light);
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
+  margin-top: 80px;
 }
 
 @keyframes fadeIn {
@@ -18,44 +29,75 @@ body {
   }
 }
 
-/* Adjust the position of the contact section */
-.contact-container {
-  margin-top: 180px; /* Adjust this value as needed */
-}
 nav {
-  background-color: #222;
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  font-size: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+    background-color: #222;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
+    list-style: none;
+    padding: 0;
+    display: flex;
 }
 nav ul li {
-  margin: 0 20px;
+    margin: 0 20px;
 }
 nav ul li a {
-  color: rgb(219, 205, 205);
-  text-decoration: blue;
-  font-size: 18px;
-  transition: color 0.3s, background-color 0.3s;
-  padding: 5px 10px;
-  border-radius: 5px;
+    color: rgb(219, 205, 205);
+    text-decoration: blue;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 nav ul li a:hover, .nav-link.active {
-  color: rgb(228, 200, 200);
-  background-color: rgb(245, 159, 0);
+    color: rgb(228, 200, 200);
+    background-color: rgb(245, 159, 0);
+}
+
+/* =============================
+   CONTACT SECTION
+============================= */
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.section-title-underline {
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary);
+  margin: 0 auto 40px;
+  border-radius: 2px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.contact-info {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .contact-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 .contact-info p {
@@ -70,57 +112,65 @@ nav ul li a:hover, .nav-link.active {
 
 .contact-method {
   display: flex;
-  align-items: flex-start;
-}
-.contact-container {
-  justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-:root {
-  --text-muted: #a0a0a0;
-  --card-bg: #ffffff;
-  --border: #333;
-  --radius: 8px;
-  --primary: #ff9933;
-  --transition: all 0.3s ease-in-out;
-  --background-saffron: #ff9933;
-  --background-white: #ffffff;
-}
-
-body {
-  background: linear-gradient(var(--background-saffron), var(--background-white));
 }
 
 .method-icon {
+  background-color: var(--primary);
+  color: black;
+  width: 3rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
   border-radius: var(--radius);
-  background: var(--card-bg);
-  color: var(--primary);
   margin-right: 1rem;
+  font-size: 1.2rem;
 }
 
 .method-details h4 {
-  font-size: 1.125rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+  margin: 0;
 }
 
 .method-details p {
   color: var(--text-muted);
-  margin-bottom: 0;
+  margin: 0;
 }
+
+/* SEND MAIL BUTTON */
+.send-mail-button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: #000;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.send-mail-button:hover {
+  background-color: #cc7a00;
+}
+
+.send-mail-button i {
+  margin-right: 8px;
+}
+
+/* =============================
+   FORM STYLES
+============================= */
 
 .contact-form-container {
   background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
   padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
 }
 
 .contact-form {
@@ -130,6 +180,7 @@ body {
 
 .form-row {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
 }
 
@@ -145,46 +196,60 @@ body {
 
 .form-group input,
 .form-group textarea {
-  padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem;
+  background: #2a2a2a;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  color: rgb(204, 47, 47);
-  font-family: inherit;
+  color: #fff;
   transition: var(--transition);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(10, 165, 233, 0.25);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 153, 51, 0.3);
 }
 
 .form-group textarea {
-  resize: none;
+  resize: vertical;
+  min-height: 120px;
 }
 
 .btn-submit {
-  width: 100%;
+  background-color: var(--primary);
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.btn-submit:hover {
+  background-color: #cc7a00;
+}
+
+.btn-submit i {
+  margin-right: 8px;
+}
+
+/* =============================
+   SUCCESS MESSAGE
+============================= */
 
 .form-success {
   display: none;
-  padding: 0.75rem;
-  background: rgba(74, 134, 96, 0.2);
-  border: 1px solid rgba(34, 197, 94, 0.5);
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.4);
   border-radius: var(--radius);
   color: #22c55e;
-  margin-top: 1rem;
-}
-
-/* Define missing CSS variables */
-:root {
-  --text-muted: #ffffff;
-  --card-bg: #1a1a1a;
-  --border: #333;
-  --radius: 8px;
-  --primary: #0aa5e9;
-  --transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-weight: 500;
 }
