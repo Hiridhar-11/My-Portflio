@@ -3,54 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Activity</title>
-  <link rel="stylesheet" href="./assests/css/assignment.css">
-</head>
+  <title>Assignments</title>
+  <link rel="stylesheet" href="./assests/css/assignment.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
 <body>
+
+  <!-- NAVIGATION -->
   <nav>
     <ul>
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="academics.html" class="nav-link">Academics</a></li>
-      <li><a href="project.html" class="nav-link">Projects</a></li>
+      <li><a href="project.html" class="nav-link">Project</a></li>
+      <li><a href="pitch.html" class="nav-link">Pitch Presentation</a></li>
       <li><a href="intern.html" class="nav-link">Intern</a></li>
-      <li><a href="assignment.html" class="nav-link">Assignment</a></li>
+      <li><a href="#" class="nav-link active">Assignment</a></li>
       <li><a href="contact.html" class="nav-link">Contact Me</a></li>
     </ul>
+    <div class="top-buttons">
+      <button onclick="scrollToSection('assignments')">ASSIGNMENTS</button>
+      
+    </div>
   </nav>
 
+  <!-- ACTIVITY GRID -->
   <h1>ACTIVITY</h1>
-  <div class="container">
-    <div class="row">
-      <div class="file">
-        <h2>COMPUTATIONAL HARDWARE</h2>
-        <button class="open-btn">OPEN</button>
-      </div>
-      <div class="file">
-        <h2>CODING FOR INNOVATERS</h2>
-        <button class="open-btn">OPEN</button>
-      </div>
-      <div class="file">
-        <h2>INDUSTRIAL AUTOMATION</h2>
-        <button class="open-btn">OPEN</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="file">
-        <h2>APPLIED DESIGN THINKING</h2>
-        <button class="open-btn">OPEN</button>
-      </div>
-      <div class="file">
-        <h2>STARTUP FUNDAMENTALES</h2>
-        <button class="open-btn">OPEN</button>
-      </div>
-      <div class="file">
-        <h2>PROTOTYPE DEVELOPMENT</h2>
-        <button class="open-btn">OPEN</button>
-      </div>
-    </div>
+  <div class="activity-grid">
+    <div class="activity-card"><h2>COMPUTATIONAL HARDWARE</h2><a href="https://drive.google.com/file/d/your-file-id/view" target="_blank">
+  <button class="btn">View</button>
+</a>
+</div>
+    <div class="activity-card"><h2>CODING FOR INNOVATORS</h2><a href="https://drive.google.com/file/d/your-file-id/view" target="_blank">
+  <button class="btn">View</button>
+</a>
+</div>
+    <div class="activity-card"><h2>INDUSTRIAL AUTOMATION</h2><a href="https://drive.google.com/file/d/your-file-id/view" target="_blank">
+  <button class="btn">View</button>
+</a>
+</div>
+    <div class="activity-card"><h2>APPLIED DESIGN THINKING</h2><a href="https://drive.google.com/file/d/your-file-id/view" target="_blank">
+  <button class="btn">View</button>
+</a>
+</div>
+    <div class="activity-card"><h2>STARTUP FUNDAMENTALS</h2><a href="https://drive.google.com/file/d/your-file-id/view" target="_blank">
+  <button class="btn">View</button>
+</a>
+</div>
+    <div class="activity-card"><h2>PROTOTYPE DEVELOPMENT</h2><a href="https://drive.google.com/file/d/your-file-id/view" target="_blank">
+  <button class="btn">View</button>
+</a>
+</div>
   </div>
 
-  <script src="./assests/js/assignment.js"></script>
+  <!-- ASSIGNMENT TITLES -->
+  <section id="assignments">
+    <h1>ASSIGNMENTS</h1>
+    <div class="details-card">
+       <img src="./assets/images/week1.png" class="corner-img" alt="Week 1">
+      <h2>Week 1 - Laser-Cut Geodesic Sphere</h2>
+      <p>Design using 120 triangles in Fusion 360. Facilitated by Sabareesh.</p>
+      <a href="week1.html">
+  <button class="btn">View</button>
+
+
+</a>
+
+    </div>
+    <div class="details-card">
+        <img src="./assets/images/week1.png" class="corner-img" alt="Week 1">
+      <h2>Week 2 - System Thinking</h2>
+      <p>Exploring System Thinking - by Charath.</p>
+      <a href="week2.html">
+  <button class="btn">View</button>
+</a>
+    </div>
+    <div class="details-card">
+        <img src="./assets/images/week1.png" class="corner-img" alt="Week 1">
+      <h2>Week 3 - Coding for Innovators</h2>
+      <p>Logic-driven App & Game Development - by Farooq.</p>
+       <a href="week3.html">
+  <button class="btn">View</button>
+</a>
+    </div>
+    <div class="details-card">
+        <img src="./assets/images/week1.png" class="corner-img" alt="Week 1">
+      <h2>Week 4 - Portfolio Development</h2>
+      <p>HTML, CSS & GitHub Hosting.</p>
+       <a href="week4.html">
+  <button class="btn">View</button>
+</a>
+    </div>
+    <div class="details-card">
+        <img src="./assets/images/week1.png" class="corner-img" alt="Week 1">
+      <h2>Week 5 - Applied Design Thinking</h2>
+      <p>Design thinking & IP session - by Deepak.</p>
+       <a href="week5.html">
+  <button class="btn">View</button>
+</a>
+    </div>
+    <div class="details-card">
+        <img src="./assets/images/week1.png" class="corner-img" alt="Week 1">
+      <h2>Week 6 - Robotic Arm</h2>
+      <p>Controlling robotic arms using sensors - by Sabareesh.</p>
+       <a href="week1.html">
+  <button class="btn">View</button>
+</a>
+    </div>
+    <div class="details-card">
+        <img src="./assets/images/week1.png" class="corner-img" alt="Week 1">
+      <h2>Week 7 - Understanding Sensors</h2>
+      <p>Basics of sensors and applications - by Guna.</p>
+       <a href="week1.html">
+  <button class="btn">View</button>
+</a>
+    </div>
+    <div class="details-card">
+        <img src="./assets/images/week1.png" class="corner-img" alt="Week 1">
+      <h2>Week 8 - Computational Hardware</h2>
+      <p>Working with microcontrollers and digital IO.</p>
+       <a href="week1.html">
+  <button class="btn">View</button>
+</a>
+    </div>
+  </section>
+
+  
+
+  <script>
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
 </body>
 </html>
-
