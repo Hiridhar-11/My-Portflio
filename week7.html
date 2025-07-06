@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Week 7 - Sensor and IoT Integration</title>
+  <link rel="stylesheet" href="./assests/css/week7.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="academics.html" class="nav-link">Academics</a></li>
+      <li><a href="project.html" class="nav-link">Project</a></li>
+      <li><a href="pitch.html" class="nav-link">Pitch Presentation</a></li>
+      <li><a href="intern.html" class="nav-link">Intern</a></li>
+      <li><a href="assignment.html" class="nav-link active">Assignment</a></li>
+      <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <div class="container">
+    <h1>Week 7: Soil Moisture Detection & Data Logging using NodeMCU ESP32</h1>
+
+    <h2>1. Introduction</h2>
+    <img src="./assets/images/week7/sensor.png" alt="Soil Sensor" class="section-image">
+    <p>This project detects soil moisture using a sensor module and logs data to Google Sheets via Firebase using NodeMCU ESP32 and Google Apps Script.</p>
+
+    <h2>2. Components Required</h2>
+    <ul>
+      <li>NodeMCU 32 ESP-12</li>
+      <li>Soil Moisture Sensor Module</li>
+      <li>Oscilloscope</li>
+      <li>Jumper wires, breadboard, power supply</li>
+      <li>Computer with Arduino IDE</li>
+      <li>Google Sheets & Apps Script</li>
+    </ul>
+
+    <h2>3. Understanding the Moisture Sensor Module</h2>
+    <p>The sensor includes:</p>
+    <ul>
+      <li><strong>Probes:</strong> inserted into the soil</li>
+      <li><strong>Module board:</strong> converts signals into analog output</li>
+    </ul>
+    <p><strong>Pin Descriptions:</strong></p>
+    <ul>
+      <li>VCC → 3.3V or 5V</li>
+      <li>GND → Ground</li>
+      <li>A0 → Analog signal output</li>
+      <li>D0 → Digital HIGH/LOW output</li>
+    </ul>
+
+    <h2>4. Measuring Moisture with Oscilloscope</h2>
+    <img src="./assets/images/week7/oscilloscope.png" class="section-image" alt="Oscilloscope Output">
+    <ul>
+      <li>Wet Soil: ~3–5V (High signal)</li>
+      <li>Moderate Soil: ~1.5–2.5V</li>
+      <li>Dry Soil: ~0.5V or less</li>
+    </ul>
+
+    <h2>5. NodeMCU Integration</h2>
+    <img src="./assets/images/week7/nodemcu.png" class="section-image" alt="NodeMCU Connection">
+    <p>Connect sensor output pins to GPIOs of NodeMCU. Analog values are read via ADC, and logic levels through digital pins.</p>
+
+    <h2>6. Firebase and Google Sheets Integration</h2>
+    <img src="./assets/images/week7/firebase.png" class="section-image" alt="Firebase">
+    <p>Store data in Firebase, then pull it into a Google Sheet:</p>
+    <ol>
+      <li>Create Google Sheet with headers</li>
+      <li>Use Apps Script to fetch and insert data</li>
+      <li>Set triggers to automate every minute</li>
+    </ol>
+    <img src="./assets/images/week7/sheet.png" class="section-image" alt="Google Sheets Automation">
+
+    <h2>7. Conclusion</h2>
+    <img src="./assets/images/week7/conclusion.png" class="section-image" alt="Conclusion">
+    <p>The system works reliably for live soil condition monitoring. Data flows from sensor → NodeMCU → Firebase → Google Sheets.</p>
+
+    <h3>Soil Moisture Interpretation Table</h3>
+    <ul>
+      <li>10–100: Sensor disconnected</li>
+      <li>100–300: Wet soil (80–100%)</li>
+      <li>300–600: Moderate (50–70%)</li>
+      <li>600–900: Drying soil (30–50%)</li>
+      <li>900–1200: Very dry (0–20%)</li>
+    </ul>
+
+    <div class="download-link">
+      <a href="https://drive.google.com/file/d/1LNAK4TR11R1iC6va4r6a42DIHYLkcVmu/view?usp=sharing" target="_blank">
+        <i class="fas fa-file-pdf"></i> View Full PDF Report
+      </a>
+      <a href="assignment.html">
+        <i class="fas fa-arrow-left"></i> Back to Assignments
+      </a>
+    </div>
+  </div>
+</body>
+</html>

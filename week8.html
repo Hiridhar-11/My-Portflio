@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Week 8 - RFID Access Control System</title>
+  <link rel="stylesheet" href="./assests/css/week8.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="academics.html" class="nav-link">Academics</a></li>
+      <li><a href="project.html" class="nav-link">Project</a></li>
+      <li><a href="pitch.html" class="nav-link">Pitch Presentation</a></li>
+      <li><a href="intern.html" class="nav-link">Intern</a></li>
+      <li><a href="assignment.html" class="nav-link active">Assignment</a></li>
+      <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <div class="container">
+    <h1>Week 8: RFID Access System with Real-Time Google Sheets Logging</h1>
+
+    <h2>1. Introduction</h2>
+    <p>This week, we created an IoT-based RFID door lock system using ESP32, RFID (RC522), buzzer, LED, LCD display, and servo motor, with live logging to Google Sheets.</p>
+
+    <img src="./assets/images/week8/esp32.png" class="section-image" alt="ESP32 Interface">
+
+    <h2>2. Hardware Setup</h2>
+    <ul>
+      <li>RC522 RFID Module</li>
+      <li>ESP32 Microcontroller</li>
+      <li>16x2 I2C LCD Display</li>
+      <li>Buzzer & LED</li>
+      <li>Servo Motor (Gate)</li>
+      <li>RTC Module (DS1302)</li>
+    </ul>
+    <img src="./assets/images/week8/circuit.png" class="section-image" alt="Circuit Diagram">
+
+    <h2>3. Functionalities</h2>
+    <ul>
+      <li>RFID-based user verification</li>
+      <li>LED + buzzer response for access</li>
+      <li>Display user feedback on LCD</li>
+      <li>Servo opens/closes gate for authorized UID</li>
+      <li>Logs UID, status, and timestamp to Google Sheet via Apps Script</li>
+    </ul>
+
+    <h2>4. Code Integration</h2>
+    <p>
+      The code uses libraries for:
+      <ul>
+        <li><code>MFRC522</code> for RFID</li>
+        <li><code>LiquidCrystal_I2C</code> for LCD</li>
+        <li><code>ESP32Servo</code> for gate motor</li>
+        <li><code>RtcDS1302</code> for RTC time</li>
+        <li><code>WiFi</code> and <code>HTTPClient</code> for data logging</li>
+      </ul>
+    </p>
+    <img src="./assets/images/week8/lcd.png" class="section-image" alt="LCD Display">
+
+    <h2>5. Output Video</h2>
+    <p>Click below to watch the system working in real-time.</p>
+    <a href="https://drive.google.com/file/d/18bvKu2xTqN1pHlx2sAJIs5vOyVvUOgco/view?usp=drive_link" target="_blank" class="video-button">
+      <i class="fas fa-video"></i> Click here to view the demo video
+    </a>
+
+    <h2>6. Firebase & Apps Script Integration</h2>
+    <p>
+      Data from the ESP32 is sent via HTTP POST to a Web App script created using Google Apps Script. The script logs:
+      <ul>
+        <li>UID of scanned RFID tag</li>
+        <li>Status (Granted/Denied)</li>
+        <li>Timestamp from RTC</li>
+      </ul>
+    </p>
+
+    <h2>7. Final Output</h2>
+    <img src="./assets/images/week8/rfid.png" class="section-image" alt="RFID Interface">
+    <p>The system provides real-time, automated attendance or access control that is easily extendable to large scale.</p>
+
+    <div class="download-link">
+      <h2>5. Output Videos</h2>
+
+
+<div class="video-buttons">
+  <a href="https://drive.google.com/file/d/1y1i3hkjHVXeIlAQ8Y9akSYeAMa4SM-4h/view?usp=sharing" target="_blank" class="video-button">
+    <i class="fas fa-video"></i> Demo 1: Setup & Access
+  </a>
+
+  <a href="https://drive.google.com/file/d/1PhQI7hn8doA6QL3ydEvq_UBVV62Z3KMe/view?usp=drive_link" target="_blank" class="video-button">
+    <i class="fas fa-video"></i> Demo 2: Access Denied Scenario
+  </a>
+
+  <a href="https://drive.google.com/file/d/1MQ9sPsKwowPJXYs137ihAKyk8EkNwHpG/view?usp=drive_link" target="_blank" class="video-button">
+    <i class="fas fa-video"></i> Demo 3: Real-time Sheet Logging
+  </a>
+</div>
+
+      <a href="assignment.html">
+        <i class="fas fa-arrow-left"></i> Back to Assignments
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
