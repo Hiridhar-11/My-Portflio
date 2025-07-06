@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function eraseText() {
-            if (typingEffect.textContent.length > 1) {
+            if (typingEffect.textContent.length > 0) {
                 typingEffect.textContent = typingEffect.textContent.slice(0, -1);
                 setTimeout(eraseText, 50);
             } else {
@@ -41,4 +41,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typeText();
 });
-
