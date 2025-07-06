@@ -1,206 +1,208 @@
-/* Reset basic styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
-    background: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    padding-top: 80px;
-    text-align: center;
-    background-image: url("../images/school1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    animation: changeBackground 15s infinite;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  padding-top: 70px;
+  background-image: url("../images/school1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: changeBackground 20s infinite ease-in-out;
+  position: relative;
 }
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    
-    background: url('../images/academics.jpg') ;
-background-color: rgba(0, 0, 0, 0.5);
-    background-size: cover;
-    color: rgb(179, 184, 159);
-    text-align: center;
-}
-
 
 body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
 
-/* Navigation Bar */
+@keyframes changeBackground {
+  0%   { background-image: url("../images/graduation.jpg"); }
+  25%  { background-image: url("../images/leader1.jpg"); }
+  50%  { background-image: url("../images/sports1.jpg"); }
+  75%  { background-image: url("../images/gradu.jpg"); }
+  100% { background-image: url("../images/school1.jpg"); }
+}
+
+/* Navigation */
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
     background-color: #222;
     padding: 10px;
-    z-index: 1000;
-    font-size: 18px;
-}
-
-nav ul {
-    list-style: none;
+    position: fixed;
+    top: 0;
+    font-size: 20px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
-
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
 nav ul li {
-    margin: 10px;
+    margin: 0 20px;
 }
-
 nav ul li a {
     color: rgb(219, 205, 205);
-    text-decoration: none;
-    padding: 8px 12px;
+    text-decoration: blue;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
     border-radius: 5px;
-    transition: all 0.3s ease;
 }
-
-nav ul li a:hover,
-.nav-link.active {
+nav ul li a:hover, .nav-link.active {
+    color: rgb(228, 200, 200);
     background-color: rgb(245, 159, 0);
-    color: rgb(28, 28, 28);
 }
 
-/* Sections */
-section {
-    padding: 40px 20px;
+/* Main Layout */
+.academics-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* School and College Sections */
-.school-section, .college-section {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+.card {
+  width: 100%;
+  max-width: 700px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.02);
 }
 
-h2, h3 {
-    color: rgb(231, 192, 118);
-    margin-bottom: 10px;
+/* Title Section */
+.logo-circle {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: black;
+  margin: 0 auto 20px;
+}
+
+.image-circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.title-link {
+  text-decoration: none;
+}
+
+.title-link h2 {
+  color: orange;
+  transition: color 0.3s;
+  font-size: 22px;
+}
+
+.title-link:hover h2 {
+  color: #ffcc66;
+}
+
+/* Text */
+h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #ffc107;
+}
+
+.duration, .highlight {
+  color: #ddd;
+  margin-bottom: 10px;
 }
 
 p {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 18px;
-    margin: 8px 0;
+  font-size: 16px;
+  color: #ccc;
+  text-align: center;
 }
 
-.highlight {
-    font-weight: bold;
-    color: orange;
+/* Activities */
+.activity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
-.round-btn {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: orange;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
-    font-size: 40px;
-    color: black;
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
-    transition: transform 0.3s ease;
+.activity i {
+  font-size: 22px;
+  color: orange;
 }
 
-.round-btn:hover {
-    transform: scale(1.1);
-}
-
-.college-btn img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    background-color: orange;
-}
-
-/* Activity and Leadership Icons */
-.activity, .leadership {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
-
-.activity i, .leadership i {
-    font-size: 30px;
-    color: orange;
-}
-
-/* Fade-in animation */
+/* Animation */
 .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-
-
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
 
-    nav ul li {
-        margin: 5px 0;
-    }
+  .card {
+    padding: 20px;
+  }
 
-    body {
-        font-size: 16px;
-    }
+  .logo-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+  }
 
-    .school-section, .college-section {
-        margin: 15px 10px;
-        padding: 15px;
-    }
+  .title-link h2 {
+    font-size: 20px;
+  }
 
-    .round-btn, .college-btn img {
-        width: 80px;
-        height: 80px;
-        font-size: 30px;
-    }
+  h3 {
+    font-size: 18px;
+  }
 
-    h2, h3 {
-        font-size: 20px;
-    }
+  p {
+    font-size: 14px;
+  }
 
-    p {
-        font-size: 16px;
-    }
-
-    .activity, .leadership {
-        flex-direction: column;
-        text-align: center;
-    }
+  .activity {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
-
