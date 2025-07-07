@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hiridhar's Portfolio</title>
-  <link rel="stylesheet" href="./assests/css/styles.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship</title>
+  <link rel="stylesheet" href="./assests/css/intern.css">
+  <style>
+    .logo-container {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .logo-container::after {
+      content: "\2192 Visit Forge Website";
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background-color: #f18920;
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 6px;
+      opacity: 0;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .logo-container:hover::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
 </head>
 <body>
+  <!-- Navigation Bar -->
   <nav>
     <ul>
       <li><a href="index.html" class="nav-link">Home</a></li>
@@ -19,29 +47,35 @@
       <li><a href="contact.html" class="nav-link">Contact Me</a></li>
     </ul>
   </nav>
-
-  <section id="home">
-    <div class="background-image"></div>
-    <div class="text-section">
-      <h1>Hi, I am <span class="highlight">Hiridhar</span></h1>
-      <h2>I'm An <span class="typing-effect"></span></h2>
-      <p>Hi, welcome to my portfolio. I am enthusiastic in learning new things.</p>
-    </div>
-
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/hiridhar-m-968559280/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/hiridhar._.11/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a href="mailto:yourmail@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://github.com/Hiridhar-11" target="_blank"><i class="fa-brands fa-github"></i></a>
-    </div>
-
-    <div class="resume-button">
-      <a href="assests/images/Red and Black Simple Modern Designer Freelance Resume (1).pdf" download>
-        <button><i class="fa-solid fa-download"></i> Resume</button>
+ <!-- Main Container -->
+  <div class="container">
+    <h1>INTERNSHIP</h1>
+    <div class="logo-container">
+      <a href="https://www.forgeforward.in" target="_blank">
+        <img src="./assests/images/forge.jpg" alt="Forge Logo" class="logo">
       </a>
     </div>
-  </section>
+    <p class="about">
+      Forge is a leading company specializing in innovative solutions and cutting-edge technology.
+    </p>
 
-  <script src="./assests/js/script.js"></script>
+    <!-- Activity Button -->
+    <div class="activity-button-container">
+      <button class="activity-button" id="activitiesButton">ACTIVITIES</button>
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+      <img class="slides active" src="./assests/images/image a.jpg" alt="Slide 1">
+      <img class="slides" src="./assests/images/image b.jpg" alt="Slide 2">
+      <img class="slides" src="./assests/images/image c.jpg" alt="Slide 3">
+      <img class="slides" src="./assests/images/image d.jpg" alt="Slide 4">
+      <img class="slides" src="./assests/images/image e.jpg" alt="Slide 5">
+      <img class="slides" src="./assests/images/image f.jpg" alt="Slide 6">
+      <img class="slides" src="./assests/images/image g.jpg" alt="Slide 7">
+    </div>
+  </div>
+
+  <script src="./assests/js/intern.js"></script>
 </body>
 </html>
