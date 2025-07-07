@@ -1,4 +1,3 @@
-
 /* General Styles */
 body {
   margin: 0;
@@ -8,132 +7,197 @@ body {
   color: #fff;
   text-align: center;
 }
- nav {
-   background-color: #222;
-   padding: 10px;
-   position: fixed;
-   top: 0;
-   font-size: 20px;
-   width: 100%;
-   display: flex;
-   justify-content: center;
- }
 
- nav ul {
-   list-style: none;
-   padding: 0;
-   display: flex;
- }
-
- nav ul li {
-   margin: 0 20px;
- }
-
- nav ul li a {
-   color: rgb(219, 205, 205);
-   text-decoration: blue;
-   font-size: 18px;
-   transition: color 0.3s, background-color 0.3s;
-   padding: 5px 10px;
-   border-radius: 5px;
- }
-
- nav ul li a:hover,
- .nav-link.active {
-   color: rgb(228, 200, 200);
-   background-color: rgb(245, 159, 0);
- }
-.details-card {
-  position: relative;
-  padding: 20px;
-  border-radius: 10px;
+/* Navigation */
+nav {
   background-color: #222;
-  color: white;
-  margin: 30px auto;
-  width: 80%;
-  overflow: hidden;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  flex-wrap: wrap;
 }
 
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: rgb(219, 205, 205);
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover,
+.nav-link.active {
+  color: rgb(228, 200, 200);
+  background-color: rgb(245, 159, 0);
+}
+
+/* Top Buttons */
+.top-buttons {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.top-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: black;
+  background-color: #f18920;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 80px;
+  color: #fff;
+}
+
+/* Activity Grid */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+.activity-card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn {
+  background-color: #f18920;
+  border: none;
+  padding: 10px 20px;
+  color: black;
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffa733;
+}
+
+/* Section Padding */
+section {
+  padding: 20px;
+}
+
+/* Details Card */
+.details-card {
+  position: relative;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px auto;
+  width: 80%;
+  color: #f2f2f2;
+}
+
+.details-card h2 {
+  color: #f18920;
+}
+
+/* Corner Image */
 .corner-img {
   position: absolute;
   top: 15px;
   right: 15px;
-  width: 50px; /* Adjust as needed */
+  width: 50px;
   height: 50px;
   border-radius: 8px;
   object-fit: cover;
   border: 2px solid #f18920;
 }
 
+/* ======================================= */
+/* ========== MOBILE RESPONSIVE ========== */
+/* ======================================= */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+  }
 
- .top-buttons {
-   margin-top: 70px;
-   text-align: center;
- }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 
- .top-buttons button {
-   margin: 10px;
-   padding: 10px 20px;
-   font-weight: bold;
-   color: black;
-   background-color: #f18920;
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
- }
+  nav ul li {
+    margin: 5px 0;
+  }
 
- h1 {
-   font-size: 36px;
-   text-align: center;
-   margin-top: 80px;
-   color: #fff;
- }
+  h1 {
+    font-size: 26px;
+    margin-top: 100px;
+  }
 
- .activity-grid {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 20px;
-   padding: 40px;
- }
+  .top-buttons button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 
- .activity-card {
-   background-color: #fff;
-   color: #000;
-   border-radius: 8px;
-   padding: 20px;
-   text-align: center;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
- }
+  .activity-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
 
- .btn {
-   background-color: #f18920;
-   border: none;
-   padding: 10px 20px;
-   color: black;
-   font-weight: bold;
-   margin-top: 10px;
-   border-radius: 5px;
-   cursor: pointer;
- }
+  .activity-card {
+    padding: 16px;
+  }
 
- .btn:hover {
-   background-color: #ffa733;
- }
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 
- section {
-   padding: 20px;
- }
+  .details-card {
+    width: 90%;
+    padding: 15px;
+  }
 
- .details-card {
-   background-color: #222;
-   padding: 20px;
-   border-radius: 10px;
-   margin: 30px auto;
-   width: 80%;
-   color: #f2f2f2;
- }
+  .corner-img {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+  }
 
- .details-card h2 {
-   color: #f18920;
- }
+  .details-card h2 {
+    font-size: 20px;
+  }
 
+  section {
+    padding: 10px;
+  }
+}
